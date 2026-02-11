@@ -1,6 +1,8 @@
 #include "unions.h"
 #include <stdio.h>
 
+#define UINT_MAX 4294967295
+
 void format_object(snek_object_t obj, char *buffer) {
   switch (obj.kind) {
   case INTEGER:
@@ -20,3 +22,13 @@ snek_object_t new_integer(int i) {
 snek_object_t new_string(char *str) {
   return (snek_object_t){.kind = STRING, .data = {.v_string = str}};
 }
+
+// int main() {
+//   val_or_err_t lanes_score = {.value = -420};
+//   printf("value (set): %d\n", lanes_score.value);
+//   printf("err (unset): %u\n", lanes_score.err);
+//
+//   val_or_err_t teejs_score = {.err = UINT_MAX};
+//   printf("value (unset): %d\n", teejs_score.value);
+//   printf("err (set): %u\n", teejs_score.err);
+// }
