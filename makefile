@@ -32,7 +32,7 @@ test_union: munit.o unions.o test_unions.o
 CLEAR = test_enum test_union
 
 clean:
-	rm -f *.o $(CLEAR)
+	rm -f *.o $(CLEAR) 
 
 .PHONY: all clean 
 
